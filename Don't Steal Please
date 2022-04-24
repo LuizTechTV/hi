@@ -1,3 +1,4 @@
+
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
 local Window = Library.CreateLib("LuizTechTV [Alpha]", "Serpent")
 local Tab1 = Window:NewTab("Welcome")
@@ -53,7 +54,7 @@ end)
 
 Tab2Section:NewButton("Permanently JumpPower", "Basic Feature Ever LOL", function()
     while true do
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 70
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
 wait()
 end
 end)
@@ -190,4 +191,12 @@ Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
 game.Players.LocalPlayer.Character.Humanoid.Jump = false
 wait(1)
 end
+end)
+
+Tab5Section:NewButton("Full Bright", "Fix Little Lag", function()
+    game:GetService("Lighting").Brightness = 2
+game:GetService("Lighting").ClockTime = 14
+game:GetService("Lighting").FogEnd = 100000
+game:GetService("Lighting").GlobalShadows = false
+game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128)
 end)
