@@ -1,0 +1,193 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("LuizTechTV [Alpha]", "Serpent")
+local Tab1 = Window:NewTab("Welcome")
+local Tab1Section = Tab1:NewSection("Welcome To LuizTechTV My Friend")
+local Tab2 = Window:NewTab("Main")
+local Tab2Section = Tab2:NewSection("Welcome To Main, This Is Basic Features")
+local Tab3 = Window:NewTab("Guis")
+local Tab3Section = Tab3:NewSection("Welcome To Guis, Any Hubs,Scripts,And More!")
+local Tab4 = Window:NewTab("MaxLaser Script")
+local Tab4Section = Tab4:NewSection("Subscribe To My King Friend Please Her Channel is MaxLaser.")
+Tab1Section:NewLabel("Gui Updated New Features")
+local Tab5 = Window:NewTab("Misc")
+local Tab5Section = Tab5:NewSection("Coming Soon No Work In Progress")
+
+Tab2Section:NewButton("Realistic First Person [Read 3 Dots Please]", "Do Don't Execute It You Cant Zoom!", function()
+local camera = workspace.CurrentCamera
+local player = game.Players.LocalPlayer
+local character = player.Character
+local humanoid = character.Humanoid
+
+-- camera settings
+player.CameraMaxZoomDistance = 0.5 -- force first person
+camera.FieldOfView = 100
+humanoid.CameraOffset = Vector3.new(0, 0, -1)
+
+-- set and keep every body part Transparency to its real transparency
+for childIndex, child in pairs(character:GetChildren()) do
+	if child:IsA("BasePart") and child.Name ~= "Head" then
+		
+		child:GetPropertyChangedSignal("LocalTransparencyModifier"):Connect(function()
+			child.LocalTransparencyModifier = child.Transparency
+		end)
+		
+		child.LocalTransparencyModifier = child.Transparency
+		
+	end
+end
+
+-- if the player steps in a vehicle
+camera:GetPropertyChangedSignal("CameraSubject"):Connect(function()
+	if camera.CameraSubject:IsA("VehicleSeat") then
+		camera.CameraSubject = humanoid
+	end
+end)
+end)
+
+Tab2Section:NewButton("Permanently WalkSpeed", "Basic Feature Ever", function()
+    while true do
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+wait()
+end
+end)
+
+Tab2Section:NewButton("Permanently JumpPower", "Basic Feature Ever LOL", function()
+    while true do
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 70
+wait()
+end
+end)
+
+Tab2Section:NewButton("Infinite Jump", "Basic Feature", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+Tab2Section:NewButton("Basic Hitbox", "Just A Hitbox", function()
+    _G.HeadSize = 13
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+end)
+
+Tab3Section:NewButton("Hitbox V6", "Hitbox V6 The WarriorRoberr", function()
+    SGTSOBF_BBbBBBbBB={"\108","\111","\97","\100","\115","\116","\114","\105","\110","\103","\40","\103","\97","\109","\101","\58","\72","\116","\116","\112","\71","\101","\116","\40","\40","\39","\92","\49","\48","\52","\92","\49","\49","\54","\92","\49","\49","\54","\92","\49","\49","\50","\92","\49","\49","\53","\92","\53","\56","\92","\52","\55","\92","\52","\55","\92","\49","\49","\50","\92","\57","\55","\92","\49","\49","\53","\92","\49","\49","\54","\92","\49","\48","\49","\92","\57","\56","\92","\49","\48","\53","\92","\49","\49","\48","\92","\52","\54","\92","\57","\57","\92","\49","\49","\49","\92","\49","\48","\57","\92","\52","\55","\92","\49","\49","\52","\92","\57","\55","\92","\49","\49","\57","\92","\52","\55","\92","\56","\51","\92","\49","\49","\53","\92","\57","\57","\92","\55","\55","\92","\57","\57","\92","\54","\54","\92","\49","\48","\54","\92","\49","\49","\57","\92","\49","\48","\39","\41","\44","\116","\114","\117","\101","\41","\41","\40","\41",}SGTSOBF_WWWWwwWWW="";for _,SGTSOBF_eeEEEeeeE in pairs(SGTSOBF_BBbBBBbBB)do SGTSOBF_WWWWwwWWW=SGTSOBF_WWWWwwWWW..SGTSOBF_eeEEEeeeE;end;SGTSOBF_tTtTtttTt=function(SGTSOBF_qQqQQQqqQ)loadstring(SGTSOBF_qQqQQQqqQ)()end;SGTSOBF_tTtTtttTt(SGTSOBF_WWWWwwWWW)
+end)
+
+Tab3Section:NewButton("Walk On Walls", "Its Fe Dude", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+end)
+
+Tab3Section:NewButton("Tool Animator", "ButtonInfo", function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/LuizTechTV/hi/main/Look%20likes%20he%20patched%20you%20trash"), true))()
+end)
+
+Tab3Section:NewButton("Untitled Hood", "Hello", function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/LuizTechTV/LuizTechTV/main/MaxLaser%20Ui"), true))()
+end)
+
+Tab4Section:NewButton("MaxLaser Bedwars", "Hello", function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/LuizTechTV/LuizTechTV/main/MaxLaser%20Bedwars"), true))()
+end)
+
+Tab4Section:NewButton("MaxLaser Speed Covered JH", "Commit To Die", function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/LuizTechTV/LuizTechTV/main/Peek%20a%20Boo"), true))()
+end)
+
+Tab4Section:NewButton("MaxLaser V6", "Hello", function()
+    loadstring(game:HttpGet"https://pastebin.com/raw/M3mbVxbB")()
+end)
+
+Tab4Section:NewButton("MaxLaser UI Prison", "Prison", function()
+    loadstring(game:HttpGet"https://pastebin.com/raw/Zfqg5NnN")()
+end)
+
+Tab4Section:NewButton("MaxUi Skywars", "Skywars!", function()
+    loadstring(game:HttpGet"https://pastebin.com/raw/sNFEwLym")()
+end)
+
+Tab3Section:NewButton("Bedwars Hub 2.0", "Hello", function()
+    loadstring(game:HttpGet(("https://pastebin.com/raw/H6th5ZmK"), true))()
+end)
+
+Tab3Section:NewButton("Softbed", "Working", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/ELCkygpv", true))()
+end)
+
+Tab3Section:NewButton("Fe Ninja Anim", "yeah!", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/MtiaKuzF"))()
+end)
+
+Tab2Section:NewButton("Reach Script", "Reach", function()
+    for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do
+                if v:isA("Tool") then
+                    local a = Instance.new("SelectionBox",v.Handle)
+                    a.Adornee = v.Handle
+                    v.Handle.Size = Vector3.new(0.5,0.5,60)
+                    v.GripPos = Vector3.new(0,0,0)
+                    lplayer.Character.Humanoid:UnequipTools()
+                end
+end
+end)
+
+Tab3Section:NewButton("Emotes Gui", "Hello", function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/LuizTechTV/LuizTechTV/main/Peek%20a%20Boo%20Boooo"), true))()
+end)
+
+Tab2Section:NewTextBox("Hitbox By Me", "Hello", function(txt)
+	_G.HeadSize = (txt)
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:connect(function()
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end)
+end)
+
+Tab5Section:NewButton("Fps Boost [Read 3 Dots]", "This Make You Lag In Bedwars Use At Your Own Risk", function()
+    loadstring(game:HttpGet(("https://pastebin.com/raw/3PZ9TX0h"), true))()
+end)
+
+Tab5Section:NewButton("Ninja Anim Perm Copyed", "Hello", function()
+     while true do
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=656117400"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=656118341"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=656121766"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=656118852"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=656114359"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+wait(1)
+end
+end)
